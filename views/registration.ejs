@@ -1,0 +1,32 @@
+<%- include("header") -%>
+
+<body class="text-center">
+
+  <!-- Class is logout for rules? Why not standard class like class="nav-links" -->
+  <div class="logout">
+    <a href="/" class="create">Home</a>
+  </div>
+
+  <div class="form-signin">
+  <img class="mb-4" src="/images/uno.png" alt="" width="300" height="300">
+
+  <ul>
+    <% if(typeof errors != 'undefined') { %> <% errors.forEach(error => { %>
+      <li><%= error.message %> </li>
+    <% }) %> <% } %>
+  </ul>
+
+  <form action="/users/register" method="POST" enctype="application/x-www-form-urlencoded">
+    <div class="mid">
+      <input type="text" name="username" class="form-control bottom" placeholder="Enter a username" required>
+      <input type="email" name="email" class="form-control bottom" placeholder="Enter your email" required>
+      <input type="text" name="password" class="form-control bottom" placeholder="Enter a password" required>
+      <input type="text" name="cpassword" class="form-control bottom" placeholder="Confirm password" required>
+      <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">SIGN UP</button>
+      <!-- <input type="submit" value="register" -->
+    </div>
+  </form>
+</div>
+</body>
+
+<%- include("footer") -%>

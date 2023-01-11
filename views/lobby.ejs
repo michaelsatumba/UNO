@@ -1,0 +1,75 @@
+<%- include("header") -%>
+
+    <body class="text-center">
+
+    <div id="lobby-container" class="main-container">
+
+        <div id="lobby-header">
+            <div class="lobby">
+                <a href="/" class="create">Home</a>
+            </div>
+    
+            <div class="rules">
+                <a href="/rules" class="create">Rules</a>
+            </div>
+    
+            <div class="logout">
+                <a href="/users/logout" class="create">Log Out</a>
+            </div>
+            
+            <img class="mb-4" src="images/uno.png" alt="" width="300" height="300">
+    
+            <ul>
+                <% if(messages.success) { %>
+                  <li><%= messages.success %></li>
+                <% } %>
+                <% if(messages.error) { %>
+                  <li><%= messages.error %></li>
+                <% } %>
+            </ul>
+            
+            <div id="welcome-user">
+                <h1>Welcome <%= name %></h1>
+            </div>
+    
+            <ul>
+                <% if(typeof errors != 'undefined') { %> <% errors.forEach(error => { %>
+                  <li><%= error.message %> </li>
+                <% }) %> <% } %>
+            </ul>
+
+            <form action="/games/create" method="POST" enctype="application/x-www-form-urlencoded">
+                <input type="text" name="title" placeholder="Create a Match Name" required>
+                <button type="submit">Create New Game</button>
+            </form>
+    
+            <div class="mid">
+                <h1>Current Games</h1>
+                <p>Green: Open</p>
+                <p>Red: In Progress</p>
+            </div>
+        </div>
+
+        <!-- List of Active Games (Faisal) -->
+        <!-- Main Container to store list of active games! -->
+        <div id="games-container"></div>
+
+        <div id="lobby-chat-container">
+            <div class="chat-messages"></div>
+            <div id="lobby-chatbox" class="chatbox">
+                <form id="lobby-chat-form">
+                    <input id="lobbymsg" type="text" placeholder="Enter message" required>
+                    <button class="chat-btn btn btn-success">Send</button>
+                </form>
+            </div>
+        </div>
+
+    <!-- End of lobby-container div -->
+    </div> 
+
+    </body>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/lobby.js" charset="utf-8"></script>
+
+<%- include("footer") -%>

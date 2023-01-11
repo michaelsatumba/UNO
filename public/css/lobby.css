@@ -1,0 +1,96 @@
+#lobby-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "header header header"
+    "gamesarea gamesarea chatarea";
+}
+
+#lobby-header {
+    grid-area: header;
+}
+
+#games-container {
+    grid-area: gamesarea;
+    position: relative;
+    float: right;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(230,230,233);
+    /* margin-top: 30px; */
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    text-align: left;
+    border-radius: 4px;
+    box-sizing: border-box;
+    max-height: 150px;  
+    overflow-y: scroll; 
+    overflow-x : hidden;
+}
+
+.games-table {
+    display: table;         
+    width: auto;         
+    background-color: #eee;         
+    border: 1px solid #666666;         
+    border-spacing: 5px; /* cellspacing:poor IE support for  this */
+}
+
+.games-row {
+    display: table-row;
+    width: auto;
+    clear: both;
+}
+
+.games-column {
+    float: left; /* fix for  buggy browsers */
+    display: table-column;         
+    width: 7.5rem;
+    /* background-color: #ccc;  */
+}
+
+.games-open {
+    color: white;
+    background-color: green;
+}
+
+.game-listing {
+    cursor: pointer;
+
+    display:inline-block;
+    color:#444;
+    border:1px solid #CCC;
+    background:#DDD;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+    cursor:pointer;
+    vertical-align:middle;
+    max-width: 100px;
+    padding: 5px;
+    text-align: center;
+}
+
+.game-listing:active {
+    color:red;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+}
+
+#lobby-chat-container {
+    grid-area: chatarea;
+    
+}
+
+.chat-user {
+    color: #292C6D;
+}
+
+.chat-text {
+    color: #161853;
+}
+
+#lobbymsg {
+    margin-top: 10px;
+}
+
+.chat {
+    background-color: #edf1fc;
+}

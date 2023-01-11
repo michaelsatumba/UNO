@@ -1,0 +1,32 @@
+CURRENT NOTES:
+    - Look into way to show who's turn it is?
+
+GAME LOGIC:
+    - (FOR LATER) Fix weird double click to do most interactions?
+        - Rarely is one click for interactions (i.e. clicking card to play)
+        - NEW: Have to click again or refresh the page for updated game state after interaction
+    - Indicate who's turn it is
+        - Text Box with log of commands on screen?
+        - OR Text Box that updates who's turn it is
+    - WIN CONDITION:
+        - When a player has no more cards
+        - End the game
+            - (DONE-ish?) Stop updating gameState?
+                - Safely disable Draw button (or remove?)
+            - Post an alert or message on screen as to who won?
+    - (OPTIONAL) Two or Three players can play??
+        - Once two players are in, game can start?
+        - During game, more players up to MAX PLAYERS (4) can join?
+    - (OPTIONAL) CALL UNO! feature
+        - Checks if user is in game, check if its user's turn
+        - Checks if user has two cards (about to play a card)
+        - Displays message to socket that user has called Uno??
+        - Check on next player's turn to call out previous player's not calling Uno
+            - If correct, give previous player 4 cards?
+
+LOGIN:
+    - Incorrect login currently redirects to /users/login empty empty page 
+    - FIX this to display error messages (i.e. account doesn't exist, wrong passwd, etc.)
+
+DESIGN:
+    - Look into upgrading site designs!

@@ -1,0 +1,245 @@
+body {
+  height: 100%;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #edf1fc;
+}
+
+/* Image */
+.mb-4 {
+  width: 200px;
+  height: 200px;
+}
+
+.form-signin .components {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+  font-family: Avenir-Medium;
+  border-color: #edf1fc;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.top {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.mid {
+  margin-top: 25px;
+}
+
+.middle {
+  border-radius: 0;
+  margin-bottom: -1px;
+}
+
+.bottom {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.btn-signin, .btn-signin:hover, .btn-signin:active, .btn-signin:visited {
+  background-color: #7868f8;
+  border-color: #7868f8;
+  font-family: Avenir-Heavy;
+}
+
+.links {
+  margin: 20px;
+  text-decoration: none;
+}
+
+.link1 {
+  font-family: Avenir-Medium;
+  color: #071934;
+  text-decoration: none;
+}
+
+.link1 a {
+  color: #071934a0;
+  text-decoration: none;
+}
+
+.link2 {
+  font-family: Avenir-Heavy;
+}
+
+.link2 a {
+  color: #071934;
+  text-decoration: none;
+}
+
+.game-open {
+  color: white;
+  background-color: green;
+}
+
+.game-inprogress {
+  color: black;
+  background-color: grey;
+}
+
+.games-list {
+  position:relative;
+}
+
+.games-scroll {
+  height: 150px;
+  overflow: auto;
+  margin-top: 20px;
+}
+
+.games-list table {
+  width:100%;
+}
+
+.games-list table thead th .text {
+  position:absolute;
+  border: 1px black
+}
+
+
+.open-chat {
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* navbar */
+
+.home a {
+  font-family: Avenir-Heavy;
+  color: #071934;
+  text-decoration: none;
+  position: absolute;
+  top: 10px; right: 245px;
+}
+
+.lobby a {
+  font-family: Avenir-Heavy;
+  color: #071934;
+  text-decoration: none;
+  position: absolute;
+  top: 10px; right: 180px;
+}
+
+.rules a {
+  font-family: Avenir-Heavy;
+  color: #071934;
+  text-decoration: none;
+  position: absolute;
+  top: 10px; right: 120px;
+}
+
+.logout a {
+  font-family: Avenir-Heavy;
+  color: #071934;
+  text-decoration: none;
+  position: absolute;
+  top: 10px; right: 40px;
+}
+
+/* game */
+.form-game {
+  font-family: Avenir-Medium;
+  padding: 15px;
+}
+
+.game-image {
+  display: flex;
+  justify-content: center;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+}
+
+.player1Deck {
+  display: flex;
+  justify-content: center;
+}
+
+.player1Deck img{
+  width: 50px;
+  height: auto;
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+
+.player1Deck img:hover {
+  top: -10px;
+}
+
+.game-middle {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 0;
+  
+
+  width: calc(60vh - 5px);
+}
+
+.middle-card img{
+  width: 75px;
+  height: auto;
+}
+
+.player2Deck img{
+  width: 50px;
+  height: auto;
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+
+.player2Deck img:hover {
+  top: -10px;
+}
+
+
+
+.player2Deck {
+  display: flex;
+  justify-content: center;
+
+}
+
+.player2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
